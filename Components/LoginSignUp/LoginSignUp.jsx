@@ -4,23 +4,26 @@ import {useState} from 'react';
 
 
 export const LoginSignUp = () => {
-const [name, setName]= useState("");
-const [pass, setPass]= useState("");
-const [location, setLocation]= useState("");
-const [tech, setTech]= useState("");
-const [food, setFood]= useState("");
-const [movie, setMovie]= useState("");
-const [culture, setCulture]= useState("");
-const [art, setArt]= useState("");
-const [drama, setDrama]= useState("");
-const [Lname, setLname]= useState("");
-const [Lpass, setLpass]= useState("");
+// const [name, setName]= useState("");
+// const [pass, setPass]= useState("");
+// const [location, setLocation]= useState("");
+// const [tech, setTech]= useState("");
+// const [food, setFood]= useState("");
+// const [movie, setMovie]= useState("");
+// const [culture, setCulture]= useState("");
+// const [art, setArt]= useState("");
+// const [drama, setDrama]= useState("");
+// const [Lname, setLname]= useState("");
+// const [Lpass, setLpass]= useState("");
 
+// const Passs=(e)=>{
+//   console.log(e);
+// }
 
 
   return (
     <div className="loginSignUp">
-      <form className="signUp" onSubmit={SignSub}>
+      <form className="signUp" onSubmit={(e)=>{Passs(e)}}>
         <h1>SignUp</h1>
         <label>name</label>
         <input
