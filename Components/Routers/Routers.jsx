@@ -11,6 +11,7 @@ export const Routers = () => {
         <Navbar />
         <Routes>
             <Route path="/" element={<Home />} />
+            {/* <Route path="/meetup/:id" element={<Home />} /> */}
             {/* Create other routes here: loginsignup, meetup, addmeetup and 404 */}
             {/* meetup route should be dynamic */}
         </Routes>
