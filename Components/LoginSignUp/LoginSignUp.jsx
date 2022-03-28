@@ -1,13 +1,32 @@
+import './Log.scss'
+import {useState} from 'react';
+
+
+
 export const LoginSignUp = () => {
+const [name, setName]= useState("");
+const [pass, setPass]= useState("");
+const [location, setLocation]= useState("");
+const [tech, setTech]= useState("");
+const [food, setFood]= useState("");
+const [movie, setMovie]= useState("");
+const [culture, setCulture]= useState("");
+const [art, setArt]= useState("");
+const [drama, setDrama]= useState("");
+const [Lname, setLname]= useState("");
+const [Lpass, setLpass]= useState("");
+
+
+
   return (
     <div className="loginSignUp">
-      <form className="signUp" onSubmit={(e) => { }}>
+      <form className="signUp" onSubmit={SignSub}>
         <h1>SignUp</h1>
         <label>name</label>
         <input
           type="text"
           className="name"
-          onChange={(event) => { }}
+          onChange={(e) => {NameChange(e)}}
           required
         />
         <br />
@@ -15,11 +34,11 @@ export const LoginSignUp = () => {
         <input
           type="text"
           className="password"
-          onChange={(event) => { }}
+          onChange={(e) => {PasswordChange(e)}}
           required
         />
         <br />
-        <select value={""} className="location" onChange={(event) => { }}>
+        <select value={""} className="location" onChange={(e) => {LocationChange(e)}}>
           <option value=""></option>
           <option value="bangalore">Bangalore</option>
           <option value="kolkata">Kolkata</option>
@@ -32,41 +51,41 @@ export const LoginSignUp = () => {
         <input
           type="checkbox"
           className="technology"
-          onChange={(event) => { }}
+          onChange={(e) => {TechChange(e)}}
         />
         <br />
         <label>food</label>
-        <input type="checkbox" className="food" onChange={(event) => { }} />
+        <input type="checkbox" className="food" onChange={(e) => {FoodChange(e)}} />
         <br />
         <label>movies</label>
-        <input type="checkbox" className="movies" onChange={(event) => { }} />
+        <input type="checkbox" className="movies" onChange={(e) => {MovieChange(e)}} />
         <br />
         <label>culture</label>
-        <input type="checkbox" className="culture" onChange={(event) => { }} />
+        <input type="checkbox" className="culture" onChange={(e) => {CultureChange(e)}} />
         <br />
         <label>art</label>
-        <input type="checkbox" className="art" onChange={(event) => { }} />
+        <input type="checkbox" className="art" onChange={(e) => {ArtChange(e)}} />
         <br />
         <label>drama</label>
-        <input type="checkbox" className="drama" onChange={(event) => { }} />
+        <input type="checkbox" className="drama" onChange={(e) => {DramaChange(e)}} />
         <br />
         <label>image</label>
         <input
           type="text"
           className="image"
-          onChange={(event) => { }}
+          onChange={(e) => {ImgChange(e)}}
           required
         />
         <br />
         <input type="submit" className="submitSignUpForm" />
       </form>
-      <form className="login" onSubmit={(e) => { }}>
+      <form className="login" onSubmit={LogSub}>
         <h1>Login</h1>
         <label>name</label>
         <input
           type="text"
           className="name"
-          onChange={(event) => { }}
+          onChange={(e) => {UserChange(e)}}
           required
         />
         <br />
@@ -74,7 +93,7 @@ export const LoginSignUp = () => {
         <input
           type="text"
           className="password"
-          onChange={(event) => { }}
+          onChange={(e) => {PassChange(e)}}
           required
         />
         <br />
