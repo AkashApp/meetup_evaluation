@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import './hom.scss'
 
 export const Home = () => {
 
@@ -21,14 +22,19 @@ export const Home = () => {
 
   return (
     <div className="homeContainer">
-      {
-        // meet.filter((el) => { }) // Filter on the basis of Users interests and location (both true)
-        meet.map((el)=>(
+      <div className="homer">
+          {
+          // meet.filter((el) => { }) // Filter on the basis of Users interests and location (both true)
+          meet.map((el)=>(
                 <Link to={`/meetup/${el.id}`} className="events">
-                  <img src={el.image} alt="" />
-                  
+                  <img src={el.image} alt="MeetUp_Image" className="Meet_Logo"/>
+                  <h1>{el.title}</h1>
+                  <h3>{el.theme}</h3>
+                  <h2>{el.location}</h2>
+                  <h4>{el.time}</h4>
                 </Link>
           ))}
+      </div>
 
       <div className="subscribedData">
         <div>
