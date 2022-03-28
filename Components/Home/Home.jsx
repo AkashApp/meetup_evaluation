@@ -30,6 +30,7 @@ export const Home = () => {
                   <img src={el.image} alt="MeetUp_Image" className="Meet_Logo"/>
                   <h1>{el.title}</h1>
                   <h3>{el.theme}</h3>
+                  <h5>{el.description}</h5>
                   <h2>{el.location}</h2>
                   <h4>{el.time}</h4>
                 </Link>
